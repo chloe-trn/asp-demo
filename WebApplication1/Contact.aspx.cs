@@ -11,7 +11,21 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Title = "On Page Load";
+            }
+            else 
+            {
+                Title = "Postback Data: " + TextBox1.Text;
+            }
+            
+           
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
